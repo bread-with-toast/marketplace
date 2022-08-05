@@ -1,3 +1,5 @@
+use std::{thread, time};
+
 struct Item {
     name: String,
     description: String,
@@ -14,6 +16,10 @@ enum Categories {
     Vehicle,
     Gadget,
     Other
+}
+
+fn sleep(s: u64) {
+    thread::sleep(time::Duration::from_secs(s));
 }
 
 fn main() {
